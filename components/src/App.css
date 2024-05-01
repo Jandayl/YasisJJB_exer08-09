@@ -1,0 +1,10 @@
+.App {
+  flex-direction: column;
+  display: flex;
+  background-color: brown;
+  border-color: aqua;
+  border-width: 20px;
+  padding: 20px;
+  justify-content: center;
+  align-content: center;
+}
