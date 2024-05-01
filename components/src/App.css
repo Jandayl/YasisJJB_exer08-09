@@ -8,3 +8,33 @@
   justify-content: center;
   align-content: center;
 }
+
+.Header {
+  display: flex;
+  background-color: blanchedalmond;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content:space-between;
+}
+
+.Types.selected {
+  background-color: brown;
+  color: white;
+}
+
+.contain {
+  display: flex;
+}
+
+.Types {
+  display: flex;
+  padding: 20px;
+  background-color: beige;
+  border-style: ridge;
+  border-color: azure;
+  border-width: 5px;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
