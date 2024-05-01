@@ -37,6 +37,7 @@
   text-align: center;
   align-items: center;
   justify-content:space-between;
+  flex-wrap: wrap;
 }
 
 .Body {
@@ -69,6 +70,7 @@
   display: flex;
   justify-content: space-evenly;
   gap: 5px;
+  flex-wrap: wrap;
 }
 
 .Types {
