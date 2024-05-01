@@ -11,6 +11,15 @@
   align-content: space-around;
 }
 
+.Body {
+  display: flex;
+  background-color: beige;
+  padding: 10px;
+  justify-content: space-evenly;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .buttons {
   display: flex;
   background-color: brown;
@@ -18,13 +27,6 @@
   border-color: burlywood;
   padding: 5px;
   color: bisque;
-}
-.img {
-  width: 250px;
-  height: 250px;
-  border-radius: 5px;
-  box-shadow: 5px;
-  padding: 20px;
 }
 
 .cart {
@@ -34,6 +36,32 @@
   gap:3px;
   justify-content: first baseline;
 }
+
+.cartItems {
+  display: flex;
+  background-color: blanchedalmond;
+  padding: 20px;
+  text-align:end;
+  align-items: center;
+  justify-content:space-between;
+  border-color: azure;
+  border-width: 2px;
+  border-style:groove;
+  width: 250px;
+}
+
+.contain {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.deletebutton {
+  width: 15px;
+  height: 15px,
+}
+
 .Header {
   display: flex;
   background-color: blanchedalmond;
@@ -45,13 +73,12 @@
   flex-wrap: wrap;
 }
 
-.Body {
-  display: flex;
-  background-color: beige;
-  padding: 10px;
-  justify-content: space-evenly;
-  flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
+.img {
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
+  box-shadow: 5px;
+  padding: 20px;
 }
 
 .Items {
@@ -67,34 +94,6 @@
   border-style:groove;
 }
 
-.cartItems {
-  display: flex;
-  background-color: blanchedalmond;
-  padding: 20px;
-  text-align:end;
-  align-items: center;
-  justify-content:space-between;
-  border-color: azure;
-  border-width: 2px;
-  border-style:groove;
-  width: 250px;
-}
-.Types.selected {
-  background-color: brown;
-  color: white;
-}
-
-.deletebutton {
-  width: 15px;
-  height: 15px,
-}
-.contain {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 5px;
-  flex-wrap: wrap;
-}
-
 .Types {
   display: flex;
   padding: 20px;
@@ -104,4 +103,9 @@
   border-width: 5px;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+.Types.selected {
+  background-color: brown;
+  color: white;
 }
