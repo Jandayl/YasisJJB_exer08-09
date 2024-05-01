@@ -22,12 +22,18 @@
 .img {
   width: 250px;
   height: 250px;
-  margin-right: '10px';
-  border-radius: 3px;
+  border-radius: 5px;
   box-shadow: 5px;
   padding: 20px;
 }
 
+.cart {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  gap:3px;
+  justify-content: first baseline;
+}
 .Header {
   display: flex;
   background-color: blanchedalmond;
@@ -60,11 +66,28 @@
   border-width: 2px;
   border-style:groove;
 }
+
+.cartItems {
+  display: flex;
+  background-color: blanchedalmond;
+  padding: 20px;
+  text-align:end;
+  align-items: center;
+  justify-content:space-between;
+  border-color: azure;
+  border-width: 2px;
+  border-style:groove;
+  width: 250px;
+}
 .Types.selected {
   background-color: brown;
   color: white;
 }
 
+.deletebutton {
+  width: 15px;
+  height: 15px,
+}
 .contain {
   display: flex;
   justify-content: space-evenly;
