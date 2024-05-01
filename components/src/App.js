@@ -12,7 +12,7 @@ function App() {
                     <header> Lazado </header>
                     <NavPanel data={navCat} />
                 </div>
-                <div className="Body">
+                <div className ="Body">
                     <ItemsPanel data = {itemsLaz} />
                 </div>
             </div>
