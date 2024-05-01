@@ -17,6 +17,7 @@ function NavPanel(props) {
                         className={`Types ${selectedItem === item ? 'selected' : ''}`} // Apply selected class if item is selected
                         onClick={() => handleItemClick(item)}
                     >
+                        
                         {item.name}
                     </button>
                 ))

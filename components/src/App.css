@@ -2,11 +2,31 @@
   flex-direction: column;
   display: flex;
   background-color: brown;
-  border-color: aqua;
-  border-width: 20px;
+  border-color: beige;
+  border-width: 5px;
+  border-style: ridge;
+  box-shadow: 3px;
   padding: 20px;
-  justify-content: center;
-  align-content: center;
+  justify-content: space-between;
+  align-content: space-around;
+
+}
+
+.buttons {
+  display: flex;
+  background-color: brown;
+  border-radius: 3px;
+  border-color: burlywood;
+  padding: 5px;
+  color: bisque;
+}
+.img {
+  width: 250px;
+  height: 250px;
+  margin-right: '10px';
+  border-radius: 3px;
+  box-shadow: 5px;
+  padding: 20px;
 }
 
 .Header {
@@ -19,6 +39,26 @@
   justify-content:space-between;
 }
 
+.Body {
+  display: flex;
+  background-color: beige;
+  padding: 10px;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.Items {
+  display: flex;
+  background-color: blanchedalmond;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content:space-between;
+  flex-direction: column;
+  border-color: azure;
+  border-width: 2px;
+  border-style:groove;
+}
 .Types.selected {
   background-color: brown;
   color: white;
@@ -26,6 +66,7 @@
 
 .contain {
   display: flex;
+  justify-content: space-evenly;
 }
 
 .Types {
