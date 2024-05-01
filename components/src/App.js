@@ -4,7 +4,6 @@ import './App.css';
 import NavPanel from "./NaviPanel";
 import ItemsPanel from "./ItemsPanel";
 
-
 function App() {
     return (
             <div className="App">
@@ -14,6 +13,7 @@ function App() {
                 </div>
                 <div className ="Body">
                     <ItemsPanel data = {itemsLaz} />
+
                 </div>
             </div>
     );

@@ -1,33 +1,10 @@
-import React, { useState } from "react";
+import React from 'react';
 import './App.css';
+import { ShoppingCart } from "./ShoppingCart";
 
 function ItemsPanel(props) {
-    const [cartItems, setCartItems] = useState([]);
-    const [itemCount, setItemCount] = useState({});
+    const { cartItems, addItems, deleteItem, itemCount } = ShoppingCart();
 
-    function addItems(item) {
-        if (cartItems.includes(item)) {
-            setItemCount(prevCount => ({
-                ...prevCount,
-                [item.id]: (prevCount[item.id] || 0) + 1
-            }));
-        } else {
-            setCartItems(prevItems => [...prevItems, item]);
-            setItemCount(prevCount => ({
-                ...prevCount,
-                [item.id]: 1
-            }));
-        }
-        console.log(`Added ${item.name} to cart!`);
-    }
-
-    function deleteItem(item) {
-        setCartItems((prevItems) => {
-            const delItem = [...prevItems];
-            delItem.splice(item, 1); // Remove the subject at the given index
-            return delItem;
-        });
-    }
 
     return (
         <div className="contain"> 
