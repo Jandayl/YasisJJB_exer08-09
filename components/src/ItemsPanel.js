@@ -20,10 +20,10 @@ function ItemsPanel(props) {
                 ))
             }
             <div className="cart">
-                <h3> Shopping Cart </h3>
+                <h3> Shopping Cart (Total: {Object.values(itemCount).reduce((acc, curr) => acc + (curr || 0), 0)}) </h3>
                 <ul className="cart">
                     {cartItems.map((cartItem, item) => (
-                        <li key={item} className="cartItems">{cartItem.name}      QTY: {itemCount[cartItem.id]}
+                        <li key={cartItem.id} className="cartItems">{cartItem.name}      QTY: {itemCount[cartItem.id]}
                         <button className="buttons" onClick={() => deleteItem(item)}> 
                         <img className="deletebutton" src= "https://pngfre.com/wp-content/uploads/X-25.png" alt="X"/>
                         </button>
