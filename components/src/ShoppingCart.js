@@ -3,6 +3,7 @@ import { useState } from "react";
 export function ShoppingCart() {
     const [cartItems, setCartItems] = useState([]);
     const [itemCount, setItemCount] = useState({});
+    const [totalItems, setTotalItems] = useState(0);
 
     function addItems(item) {
         if (cartItems.includes(item)) {
@@ -17,16 +18,24 @@ export function ShoppingCart() {
                 [item.id]: 1
             }));
         }
+        setTotalItems(prevTotalItems => prevTotalItems + 1);
         console.log(`Added ${item.name} to cart!`);
     }
 
     function deleteItem(item) {
-        setCartItems((prevItems) => {
-            const delItem = [...prevItems];
-            delItem.splice(item, 1);
-            return delItem;
+        setCartItems(prevItems => {
+            const updatedItems = prevItems.filter(cartItem => cartItem.id !== item.id);
+            const updatedCount = { ...itemCount };
+            if (updatedCount[item.id] > 1) {
+                updatedCount[item.id]--;
+            } else {
+                delete updatedCount[item.id];
+            }
+            setItemCount(updatedCount);
+            return updatedItems;
         });
+        setTotalItems(prevTotalItems => prevTotalItems - (itemCount[item.id] || 1));
     }
 
-    return { cartItems, addItems, deleteItem, itemCount };
+    return { cartItems, addItems, deleteItem, itemCount, totalItems };
 }
